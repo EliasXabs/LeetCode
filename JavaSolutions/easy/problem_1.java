@@ -1,5 +1,8 @@
 package JavaSolutions.easy;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class problem_1 {
 
     /*
@@ -13,16 +16,17 @@ public class problem_1 {
      */
 
     public int[] twoSum(int[] nums, int target) {
-        int[] result = new int[2];
+        // 5ms solution
+        // 45.5 MB
+        Map<Integer, Integer> hash = new HashMap<>();
+
         for (int i = 0; i < nums.length; i++) {
-            for (int j = 0; j < nums.length; j++) {
-                if (j != i && (nums[i] + nums[j]) == target) {
-                    result[0] = i;
-                    result[1] = j;
-                    return result;
-                }
+            if (hash.containsKey(target - nums[i])) {
+                return new int[] { i, hash.get(target - nums[i]) };
+            } else {
+                hash.put(nums[i], i);
             }
         }
-        return null;
+        return new int[] { -1, -1 };
     }
 }
