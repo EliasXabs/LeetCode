@@ -16,16 +16,20 @@ public class problem_1 {
      */
 
     public int[] twoSum(int[] nums, int target) {
-        // 2ms solution
+        // 0ms solution
         // 45.5 MB
         Map<Integer, Integer> hash = new HashMap<>();
 
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0, j = nums.length - 1; i < nums.length / 2 && j >= nums.length + 1 / 2; i++, j--) {
 
             if (hash.containsKey(target - nums[i])) {
                 return new int[] { i, hash.get(target - nums[i]) };
             }
             hash.put(nums[i], i);
+            if (hash.containsKey(target - nums[j])) {
+                return new int[] { j, hash.get(target - nums[j]) };
+            }
+            hash.put(nums[j], j);
 
         }
         return new int[] { -1, -1 };
