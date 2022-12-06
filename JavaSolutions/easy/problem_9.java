@@ -2,7 +2,8 @@ package JavaSolutions.easy;
 
 public class problem_9 {
     // Using string
-    public boolean isPalindrome(int x) {
+
+    public boolean isPalindromeS(int x) {
         String z = Integer.toString(x);
 
         if (!z.startsWith("-")) {
@@ -15,5 +16,19 @@ public class problem_9 {
             return true;
         }
         return false;
+    }
+
+    // Using int
+    public static boolean isPalindromeI(int x) {
+        int reverse = 0;
+        if (x > 0) {
+            int n;
+            n = x;
+            while (n > 0) {
+                reverse = (reverse * 10) + n % 10;
+                n = n / 10;
+            }
+        }
+        return x == reverse;
     }
 }
