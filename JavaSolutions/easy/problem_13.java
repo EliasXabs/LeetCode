@@ -30,4 +30,14 @@ public class problem_13 {
 
         return sum;
     }
+
+    // main method
+    public static void main(String[] args) {
+        problem_13 solution = new problem_13();
+        System.out.println(solution.romanToInt("III"));
+        System.out.println(solution.romanToInt("IV"));
+        System.out.println(solution.romanToInt("IX"));
+        System.out.println(solution.romanToInt("LVIII"));
+        System.out.println(solution.romanToInt("MCMXCIV"));
+    }
 }

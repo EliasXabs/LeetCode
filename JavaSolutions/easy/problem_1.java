@@ -34,4 +34,13 @@ public class problem_1 {
         }
         return new int[] { -1, -1 };
     }
+
+    // main method
+    public static void main(String[] args) {
+        problem_1 solution = new problem_1();
+        int[] nums = { 2, 7, 11, 15 };
+        int target = 9;
+        int[] result = solution.twoSum(nums, target);
+        System.out.println(result[0] + " " + result[1]);
+    }
 }

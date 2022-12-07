@@ -30,4 +30,17 @@ public class problem_938 {
         sum += rangeSumBST(root.left, low, high);
         return sum;
     }
+
+    // main method
+    public static void main(String[] args) {
+        problem_938 solution = new problem_938();
+        TreeNode root = new TreeNode(10);
+        root.left = new TreeNode(5);
+        root.right = new TreeNode(15);
+        root.right.left = new TreeNode(13);
+        root.right.right = new TreeNode(18);
+        root.left.left = new TreeNode(3);
+        root.left.right = new TreeNode(7);
+        System.out.println(solution.rangeSumBST(root, 7, 15));
+    }
 }
