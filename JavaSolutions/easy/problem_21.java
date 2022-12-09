@@ -1,5 +1,7 @@
 package JavaSolutions.easy;
 
+import JavaSolutions.ListNode;
+
 public class problem_21 {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         if (list1 == null && list2 == null) {

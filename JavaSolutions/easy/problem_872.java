@@ -2,6 +2,8 @@ package JavaSolutions.easy;
 
 import java.util.Arrays;
 
+import JavaSolutions.TreeNode;
+
 public class problem_872 {
 
     public int[] getSequence(TreeNode root) {

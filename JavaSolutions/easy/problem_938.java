@@ -1,5 +1,7 @@
 package JavaSolutions.easy;
 
+import JavaSolutions.TreeNode;
+
 public class problem_938 {
 
     /**
